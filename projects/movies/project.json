@@ -14,11 +14,11 @@
   "sourceRoot": "projects/movies/src",
   "targets": {
     "build": {
-      "executor": "@angular-devkit/build-angular:browser",
+      "executor": "@angular-devkit/build-angular:application",
       "options": {
-        "outputPath": "dist/projects/movies/browser",
+        "outputPath": "dist/projects/movies/application",
         "index": "projects/movies/src/index.html",
-        "main": "projects/movies/src/main.ts",
+        "browser": "projects/movies/src/main.ts",
         "tsConfig": "projects/movies/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "namedChunks": true,
@@ -53,8 +53,7 @@
           "budgets": false
         },
         "production": {
-          "serviceWorker": true,
-          "ngswConfigPath": "projects/movies/src/ngsw-config.json",
+          "serviceWorker": false,
           "fileReplacements": [
             {
               "replace": "projects/movies/src/environments/environment.ts",
